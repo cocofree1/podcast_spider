@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package dao;
+
+message SearchAlbumsRequest{
+    int64  albumsId = 1;
+}
+
+message SearchAlbumsReply{
+    string message = 1;
+}
+
+service Podcast {
+    rpc SearchAlbums(SearchAlbumsRequest) returns (SearchAlbumsReply){}
+}
+
